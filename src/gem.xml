@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello>
+<gem>
+    <name>almaz</name>
+    <preciousness>precious</preciousness>
+    <origin>africa</origin>
+    <visual_parameters>
+        <colour>white</colour>
+        <transparency>100</transparency>
+        <faceting>10</faceting>
+    </visual_parameters>
+    <value>15</value>
+</gem>
+    <gem>
+        <name>rube</name>
+        <preciousness>precious</preciousness>
+        <origin>USA</origin>
+        <visual_parameters>
+            <colour>red</colour>
+            <transparency>80</transparency>
+            <faceting>5</faceting>
+        </visual_parameters>
+        <value>200</value>
+    </gem>
+    <gem>
+        <name>sapphire</name>
+        <preciousness>precious</preciousness>
+        <origin>KAZAKHSTAN</origin>
+        <visual_parameters>
+            <colour>green</colour>
+            <transparency>65</transparency>
+            <faceting>8</faceting>
+        </visual_parameters>
+        <value>100</value>
+    </gem>
+</hello>
+
+

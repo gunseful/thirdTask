@@ -77,6 +77,17 @@
         </visual_parameters>
         <value>30</value>
     </gem>
+    <gem id="08">
+        <name>diamond</name>
+        <preciousness>precious</preciousness>
+        <origin>italy</origin>
+        <visual_parameters>
+            <colour>blue</colour>
+            <transparency>100</transparency>
+            <faceting>25</faceting>
+        </visual_parameters>
+        <value>30</value>
+    </gem>
 </gem>
 
 

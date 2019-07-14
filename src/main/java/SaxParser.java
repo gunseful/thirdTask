@@ -27,7 +27,7 @@ class SaxParser {
         public static ArrayList<Gem> getGems() {
             return gems;
         }
-
+        private String id;
         private String name, lastElementName;
         private String precious;
         private String origin;
@@ -39,6 +39,11 @@ class SaxParser {
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             lastElementName = qName;
+            if (qName.equals("gem")) {
+
+                id = attributes.getValue("id");
+
+            }
         }
 
         @Override
@@ -78,7 +83,9 @@ class SaxParser {
                 if (precious.equals("precious")) {
                     preciousB = true;
                 }
-                gems.add(new Gem(name, preciousB, origin, colour, transparencyB, facetingB, valueB));
+
+
+                gems.add(new Gem(id, name, preciousB, origin, colour, transparencyB, facetingB, valueB));
                 name = null;
                 precious = null;
                 origin = null;

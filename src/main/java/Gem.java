@@ -1,9 +1,16 @@
+import java.util.Comparator;
+
 public class Gem {
     private String id;
     private String name;
     boolean precious;
     private String origin;
     private String colour;
+
+    public String getId() {
+        return id;
+    }
+
     private int transparency;
     private int faceting;
     private int value;
@@ -90,4 +97,7 @@ public class Gem {
     public void setValue(int value) {
         this.value = value;
     }
+
+
+
 }

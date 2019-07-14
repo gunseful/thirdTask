@@ -12,19 +12,19 @@ import java.util.List;
 
 class SaxParser {
 
-    public List<Gem> parse(String xmladdress) throws ParserConfigurationException, SAXException, IOException {
+    List<Gem> parse(String xmlAddress) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
 
         Handler saxParser = new Handler();
-        parser.parse(new File(xmladdress), saxParser);
-        return saxParser.getGems();
+        parser.parse(new File(xmlAddress), saxParser);
+        return Handler.getGems();
     }
 
     static class Handler extends DefaultHandler {
-        public static ArrayList<Gem> gems = new ArrayList<>();
+        static ArrayList<Gem> gems = new ArrayList<>();
 
-        public static ArrayList<Gem> getGems() {
+        static ArrayList<Gem> getGems() {
             return gems;
         }
         private String id;
@@ -40,9 +40,7 @@ class SaxParser {
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             lastElementName = qName;
             if (qName.equals("gem")) {
-
                 id = attributes.getValue("id");
-
             }
         }
 
@@ -83,8 +81,6 @@ class SaxParser {
                 if (precious.equals("precious")) {
                     preciousB = true;
                 }
-
-
                 gems.add(new Gem(id, name, preciousB, origin, colour, transparencyB, facetingB, valueB));
                 name = null;
                 precious = null;

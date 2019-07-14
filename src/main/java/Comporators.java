@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 public class Comporators {
-    public static Comparator<Gem> comparatorById = new Comparator<Gem>(){
+    static Comparator<Gem> comparatorById = new Comparator<Gem>(){
         @Override
         public int compare(Gem o1, Gem o2) {
             return o1.getId().compareTo(o2.getId());
@@ -22,7 +22,7 @@ public class Comporators {
         }
     };
 
-    public static Comparator<Gem> comparatorByColour = new Comparator<Gem>(){
+    static Comparator<Gem> comparatorByColour = new Comparator<Gem>(){
         @Override
         public int compare(Gem o1, Gem o2) {
             return o1.getColour().compareTo(o2.getColour());

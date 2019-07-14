@@ -3,13 +3,11 @@ import java.util.Comparator;
 public class Gem {
     private String id;
     private String name;
-    boolean precious;
+    private boolean precious;
     private String origin;
     private String colour;
 
-    public String getId() {
-        return id;
-    }
+
 
     private int transparency;
     private int faceting;
@@ -42,7 +40,11 @@ public class Gem {
         this.value = value;
     }
 
-    public String getName() {
+    String getId() {
+        return id;
+    }
+
+    String getName() {
         return name;
     }
 
@@ -58,7 +60,7 @@ public class Gem {
         this.precious = precious;
     }
 
-    public String getOrigin() {
+    String getOrigin() {
         return origin;
     }
 
@@ -66,7 +68,7 @@ public class Gem {
         this.origin = origin;
     }
 
-    public String getColour() {
+    String getColour() {
         return colour;
     }
 

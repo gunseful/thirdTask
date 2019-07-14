@@ -28,4 +28,11 @@ public class Comporators {
             return o1.getColour().compareTo(o2.getColour());
         }
     };
+
+    static Comparator<Gem> comparatorByTransparency = new Comparator<Gem>(){
+        @Override
+        public int compare(Gem o1, Gem o2) {
+            return o1.getTransparency()-o2.getTransparency();
+        }
+    };
 }

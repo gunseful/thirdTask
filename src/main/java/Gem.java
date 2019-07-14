@@ -6,28 +6,9 @@ public class Gem {
     private boolean precious;
     private String origin;
     private String colour;
-
-
-
     private int transparency;
     private int faceting;
     private int value;
-
-
-
-    @Override
-    public String toString() {
-        return "Gem " +
-                "id = " + id +
-                ", name = " + name +
-                ", precious = " + precious +
-                ", origin = " + origin +
-                ", colour = " + colour +
-                ", transparency = " + transparency +
-                ", faceting = " + faceting +
-                ", value = " + value +
-                '}';
-    }
 
     public Gem(String id, String name, boolean precious, String origin, String colour, int transparency, int faceting, int value) {
         this.id = id;
@@ -100,6 +81,16 @@ public class Gem {
         this.value = value;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Gem " +
+                "id = " + id +
+                ", name = " + name +
+                ", precious = " + precious +
+                ", origin = " + origin +
+                ", colour = " + colour +
+                ", transparency = " + transparency + "%"+
+                ", faceting = " + faceting +
+                ", value = " + value +" carats";
+    }
 }

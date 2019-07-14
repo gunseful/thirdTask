@@ -20,5 +20,8 @@ public class Main {
         System.out.println("\n");
         gems.sort(Comporators.comparatorByColour);
         gems.forEach(System.out::println);
+        System.out.println("\n");
+        gems.sort(Comporators.comparatorByTransparency);
+        gems.forEach(System.out::println);
     }
 }

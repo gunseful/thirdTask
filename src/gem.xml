@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gem_scheme.xml">
-    <gem id="01">
+    <gem id="id1" >
     <name>almaz</name>
     <preciousness>precious</preciousness>
     <origin>africa</origin>
@@ -11,7 +11,7 @@
     </visual_parameters>
     <value>15</value>
     </gem>
-    <gem id="02">
+    <gem id="id2">
         <name>rube</name>
         <preciousness>precious</preciousness>
         <origin>USA</origin>
@@ -22,7 +22,7 @@
         </visual_parameters>
         <value>200</value>
     </gem>
-    <gem id="03">
+    <gem id="id3">
         <name>sapphire</name>
         <preciousness>precious</preciousness>
         <origin>KAZAKHSTAN</origin>
@@ -33,7 +33,7 @@
         </visual_parameters>
         <value>100</value>
     </gem>
-    <gem id="04">
+    <gem id="id4">
         <name>ametrine</name>
         <preciousness>semiprecious</preciousness>
         <origin>KAZAKHSTAN</origin>
@@ -44,7 +44,7 @@
         </visual_parameters>
         <value>500</value>
     </gem>
-    <gem id="05">
+    <gem id="id5">
         <name>amethyst</name>
         <preciousness>semiprecious</preciousness>
         <origin>russia</origin>
@@ -55,7 +55,7 @@
         </visual_parameters>
         <value>300</value>
     </gem>
-    <gem id="06">
+    <gem id="id6">
         <name>topaz</name>
         <preciousness>semiprecious</preciousness>
         <origin>france</origin>
@@ -66,25 +66,25 @@
         </visual_parameters>
         <value>115</value>
     </gem>
-    <gem id="07">
+    <gem id="id7">
         <name>diamond</name>
         <preciousness>precious</preciousness>
         <origin>italy</origin>
         <visual_parameters>
             <colour>blue</colour>
             <transparency>100</transparency>
-            <faceting>25</faceting>
+            <faceting>14</faceting>
         </visual_parameters>
         <value>30</value>
     </gem>
-    <gem id="08">
+    <gem id="id8">
         <name>diamond</name>
         <preciousness>precious</preciousness>
         <origin>italy</origin>
         <visual_parameters>
             <colour>blue</colour>
             <transparency>100</transparency>
-            <faceting>25</faceting>
+            <faceting>15</faceting>
         </visual_parameters>
         <value>30</value>
     </gem>

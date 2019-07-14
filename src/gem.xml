@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hello>
-<gem>
+<gem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gem_scheme.xml">
+    <gem id="01">
     <name>almaz</name>
     <preciousness>precious</preciousness>
     <origin>africa</origin>
@@ -10,8 +10,8 @@
         <faceting>10</faceting>
     </visual_parameters>
     <value>15</value>
-</gem>
-    <gem>
+    </gem>
+    <gem id="02">
         <name>rube</name>
         <preciousness>precious</preciousness>
         <origin>USA</origin>
@@ -22,7 +22,7 @@
         </visual_parameters>
         <value>200</value>
     </gem>
-    <gem>
+    <gem id="03">
         <name>sapphire</name>
         <preciousness>precious</preciousness>
         <origin>KAZAKHSTAN</origin>
@@ -33,6 +33,60 @@
         </visual_parameters>
         <value>100</value>
     </gem>
-</hello>
+    <gem id="04">
+        <name>ametrine</name>
+        <preciousness>semiprecious</preciousness>
+        <origin>KAZAKHSTAN</origin>
+        <visual_parameters>
+            <colour>violet</colour>
+            <transparency>64</transparency>
+            <faceting>7</faceting>
+        </visual_parameters>
+        <value>500</value>
+    </gem>
+    <gem id="05">
+        <name>amethyst</name>
+        <preciousness>semiprecious</preciousness>
+        <origin>russia</origin>
+        <visual_parameters>
+            <colour>violet</colour>
+            <transparency>75</transparency>
+            <faceting>9</faceting>
+        </visual_parameters>
+        <value>300</value>
+    </gem>
+    <gem id="06">
+        <name>topaz</name>
+        <preciousness>semiprecious</preciousness>
+        <origin>france</origin>
+        <visual_parameters>
+            <colour>blue</colour>
+            <transparency>80</transparency>
+            <faceting>10</faceting>
+        </visual_parameters>
+        <value>115</value>
+    </gem>
+    <gem id="07">
+        <name>diamond</name>
+        <preciousness>precious</preciousness>
+        <origin>italy</origin>
+        <visual_parameters>
+            <colour>blue</colour>
+            <transparency>100</transparency>
+            <faceting>25</faceting>
+        </visual_parameters>
+        <value>30</value>
+    </gem>
+</gem>
+
+
+
+
+
+
+
+
+
+
 
 

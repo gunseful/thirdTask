@@ -10,14 +10,14 @@ public class Gem {
 
     @Override
     public String toString() {
-        return "Gem{" +
-                "name='" + name + '\'' +
-                ", precious=" + precious +
-                ", origin='" + origin + '\'' +
-                ", colour='" + colour + '\'' +
-                ", transparency=" + transparency +
-                ", faceting=" + faceting +
-                ", value=" + value +
+        return "Gem " +
+                "name = " + name +
+                ", precious = " + precious +
+                ", origin = " + origin +
+                ", colour = " + colour +
+                ", transparency = " + transparency +
+                ", faceting = " + faceting +
+                ", value = " + value +
                 '}';
     }
 
@@ -86,7 +86,4 @@ public class Gem {
     public void setValue(int value) {
         this.value = value;
     }
-
-
-
 }

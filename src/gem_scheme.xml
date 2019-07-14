@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="gem">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="gem">
+                <xs:complexType>
+                    <xs:sequence>
+                <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="0" />
+                <xs:element name="preciousness" type="xs:string" maxOccurs="100" minOccurs="0" />
+                <xs:element name="origin" type="xs:string" maxOccurs="unbounded" minOccurs="0" />
+                <xs:element name="visual_parameters">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="colour" type="xs:string" />
+                            <xs:element name="transparency" type="xs:integer" maxOccurs="100" minOccurs="0" />
+                            <xs:element name="faceting" type="xs:integer" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="value" type="xs:integer" maxOccurs="100" minOccurs="0" />
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

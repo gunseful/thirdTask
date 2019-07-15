@@ -1,4 +1,4 @@
-import java.util.Comparator;
+package com.gunseful.item;
 
 public class Gem {
     private String id;
@@ -8,9 +8,10 @@ public class Gem {
     private String colour;
     private int transparency;
     private int faceting;
+    private double price;
     private int value;
 
-    public Gem(String id, String name, boolean precious, String origin, String colour, int transparency, int faceting, int value) {
+    public Gem(String id, String name, boolean precious, String origin, String colour, int transparency, int faceting, double price, int value) {
         this.id = id;
         this.name = name;
         this.precious = precious;
@@ -18,14 +19,15 @@ public class Gem {
         this.colour = colour;
         this.transparency = transparency;
         this.faceting = faceting;
+        this.price = price;
         this.value = value;
     }
 
-    String getId() {
+    public String getId() {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
@@ -41,7 +43,7 @@ public class Gem {
         this.precious = precious;
     }
 
-    String getOrigin() {
+    public String getOrigin() {
         return origin;
     }
 
@@ -49,7 +51,7 @@ public class Gem {
         this.origin = origin;
     }
 
-    String getColour() {
+    public String getColour() {
         return colour;
     }
 
@@ -91,6 +93,7 @@ public class Gem {
                 ", colour = " + colour +
                 ", transparency = " + transparency + "%"+
                 ", faceting = " + faceting +
+                ", price = " + price +"$"+
                 ", value = " + value +" carats";
     }
 }

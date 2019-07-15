@@ -1,7 +1,11 @@
+package com.gunseful.comporators;
+
+import com.gunseful.item.Gem;
+
 import java.util.Comparator;
 
 public class Comporators {
-    static Comparator<Gem> comparatorById = new Comparator<Gem>(){
+    public static final Comparator<Gem> comparatorById = new Comparator<Gem>() {
         @Override
         public int compare(Gem o1, Gem o2) {
             return o1.getId().compareTo(o2.getId());
@@ -22,14 +26,14 @@ public class Comporators {
         }
     };
 
-    static Comparator<Gem> comparatorByColour = new Comparator<Gem>(){
+    public static Comparator<Gem> comparatorByColour = new Comparator<Gem>(){
         @Override
         public int compare(Gem o1, Gem o2) {
             return o1.getColour().compareTo(o2.getColour());
         }
     };
 
-    static Comparator<Gem> comparatorByTransparency = new Comparator<Gem>(){
+    public static Comparator<Gem> comparatorByTransparency = new Comparator<Gem>(){
         @Override
         public int compare(Gem o1, Gem o2) {
             return o1.getTransparency()-o2.getTransparency();

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="gem">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element name="gem" maxOccurs="unbounded">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="preciousness" type="xs:string" maxOccurs="100" minOccurs="1" />
+                            <xs:element name="origin" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="visual_parameters" maxOccurs="unbounded" >
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element name="colour" type="xs:string" />
+                                        <xs:element name="transparency">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="100"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="faceting">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="4"/>
+                                                    <xs:maxInclusive value="15"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="price" type="xs:decimal" minOccurs="1" />
+                            <xs:element name="value" type="xs:integer" minOccurs="1" />
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

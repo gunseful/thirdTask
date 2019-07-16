@@ -6,13 +6,31 @@
                 <xs:element name="gem" maxOccurs="unbounded">
                     <xs:complexType mixed="true">
                         <xs:sequence>
-                            <xs:element name="name" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="name">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z][a-z]+"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                             <xs:element name="preciousness" type="xs:string" maxOccurs="100" minOccurs="1" />
-                            <xs:element name="origin" type="xs:string" maxOccurs="unbounded" minOccurs="1" />
+                            <xs:element name="origin">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[a-zA-Z]+"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                             <xs:element name="visual_parameters" maxOccurs="unbounded" >
                                 <xs:complexType mixed="true">
                                     <xs:sequence>
-                                        <xs:element name="colour" type="xs:string" />
+                                        <xs:element name="colour">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[A-Z][a-z]+"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="transparency">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:integer">

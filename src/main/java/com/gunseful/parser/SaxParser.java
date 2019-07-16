@@ -1,10 +1,9 @@
 package com.gunseful.parser;
-
 import com.gunseful.item.Gem;
+import com.gunseful.item.GemsVisualParameters;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -15,19 +14,20 @@ import java.util.List;
 
 public class SaxParser implements Parser{
 
-    public List<Gem> parse(String xmlAddress) throws ParserConfigurationException, SAXException, IOException {
+    public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
+        SAXParser builder = factory.newSAXParser();
 
         Handler saxParser = new Handler();
-        parser.parse(new File(xmlAddress), saxParser);
+
+        builder.parse(file, saxParser);
         return Handler.getGems();
     }
 
     static class Handler extends DefaultHandler {
 
         static ArrayList<Gem> getGems() {
-            return Parser.gems;
+            return gems;
         }
         private String id;
         private String name, lastElementName;
@@ -38,6 +38,7 @@ public class SaxParser implements Parser{
         private String faceting;
         private String price;
         private String value;
+        private GemsVisualParameters gemsVisualParameters;
 
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
@@ -80,15 +81,16 @@ public class SaxParser implements Parser{
                     && (faceting != null && !faceting.isEmpty())
                     && (price != null && !price.isEmpty()
                     && (value != null && !value.isEmpty())))) {
-                boolean preciousB = false;
-                int transparencyB = Integer.parseInt(transparency);
-                int facetingB = Integer.parseInt(faceting);
-                Double priceB = Double.parseDouble(price);
-                int valueB = Integer.parseInt(value);
+                boolean preciousBoolean = false;
+                int transparencyInt = Integer.parseInt(transparency);
+                int facetingInt = Integer.parseInt(faceting);
+                Double priceDouble = Double.parseDouble(price);
+                int valueInt = Integer.parseInt(value);
                 if (precious.equals("precious")) {
-                    preciousB = true;
+                    preciousBoolean = true;
                 }
-                gems.add(new Gem(id, name, preciousB, origin, colour, transparencyB, facetingB, priceB, valueB));
+                gemsVisualParameters = new GemsVisualParameters(colour, transparencyInt, facetingInt);
+                gems.add(new Gem(id, name, preciousBoolean, origin, priceDouble, valueInt, gemsVisualParameters));
                 name = null;
                 precious = null;
                 origin = null;
@@ -96,6 +98,7 @@ public class SaxParser implements Parser{
                 transparency = null;
                 faceting = null;
                 value = null;
+                gemsVisualParameters = null;
             }
         }
     }

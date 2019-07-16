@@ -15,6 +15,8 @@ public class Factory {
                 parser = new DomParser();
             } else if (inputos.equals("sax")) {
                 parser = new SaxParser();
+            } else if (inputos.equals("stax")) {
+                parser = new StaxParser();
         }
             return parser;
     }

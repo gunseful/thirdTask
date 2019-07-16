@@ -1,6 +1,7 @@
 package com.gunseful.parser;
 
 import com.gunseful.item.Gem;
+import com.gunseful.item.GemsVisualParameters;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -17,11 +18,14 @@ import org.w3c.dom.Node;
 
 public class DomParser implements Parser {
     @Override
-    public List<Gem> parse(String xmlAddress) throws ParserConfigurationException, SAXException, IOException {
+    public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new File(xmlAddress));
+
+        Document document = builder.parse(file);
+
         NodeList gemElements = document.getDocumentElement().getElementsByTagName("gem");
+
         for (int i = 0; i < gemElements.getLength(); i++) {
             Node gem = gemElements.item(i);
             NamedNodeMap attributes = gem.getAttributes();
@@ -38,8 +42,14 @@ public class DomParser implements Parser {
             Double price = Double.parseDouble(document.getElementsByTagName("price").item(i).getTextContent());
             int value = Integer.parseInt(document.getElementsByTagName("value").item(i).getTextContent());
             String id = attributes.getNamedItem("id").getNodeValue();
+            GemsVisualParameters gemsVisualParameters = new GemsVisualParameters(colour, transparency, faceting);
 
-            gems.add(new Gem(id, name, percious, origin, colour, transparency, faceting, price, value));
+            gems.add(new Gem(id, name, percious, origin, price, value, gemsVisualParameters));
+
+
+
+
+
 
         }
         return gems;

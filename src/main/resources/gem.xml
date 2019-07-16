@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gem_schema.xsd">
     <gem id="id1" >
-    <name>almaz</name>
+    <name>Almaz</name>
     <preciousness>precious</preciousness>
-    <origin>africa</origin>
+    <origin>Africa</origin>
     <visual_parameters>
-        <colour>white</colour>
+        <colour>White</colour>
         <transparency>100</transparency>
         <faceting>10</faceting>
     </visual_parameters>
@@ -13,11 +13,11 @@
     <value>15</value>
     </gem>
     <gem id="id2">
-        <name>rube</name>
+        <name>Rube</name>
         <preciousness>precious</preciousness>
         <origin>USA</origin>
         <visual_parameters>
-            <colour>red</colour>
+            <colour>Red</colour>
             <transparency>80</transparency>
             <faceting>5</faceting>
         </visual_parameters>
@@ -25,11 +25,11 @@
         <value>200</value>
     </gem>
     <gem id="id3">
-        <name>sapphire</name>
+        <name>Sapphire</name>
         <preciousness>precious</preciousness>
-        <origin>KAZAKHSTAN</origin>
+        <origin>Kazakhstan</origin>
         <visual_parameters>
-            <colour>green</colour>
+            <colour>Green</colour>
             <transparency>65</transparency>
             <faceting>8</faceting>
         </visual_parameters>
@@ -37,11 +37,11 @@
         <value>100</value>
     </gem>
     <gem id="id4">
-        <name>ametrine</name>
+        <name>Ametrine</name>
         <preciousness>semiprecious</preciousness>
-        <origin>KAZAKHSTAN</origin>
+        <origin>Kazakhstan</origin>
         <visual_parameters>
-            <colour>violet</colour>
+            <colour>Violet</colour>
             <transparency>64</transparency>
             <faceting>7</faceting>
         </visual_parameters>
@@ -49,11 +49,11 @@
         <value>500</value>
     </gem>
     <gem id="id5">
-        <name>amethyst</name>
+        <name>Amethyst</name>
         <preciousness>semiprecious</preciousness>
-        <origin>russia</origin>
+        <origin>Russia</origin>
         <visual_parameters>
-            <colour>violet</colour>
+            <colour>Violet</colour>
             <transparency>75</transparency>
             <faceting>9</faceting>
         </visual_parameters>
@@ -61,11 +61,11 @@
         <value>300</value>
     </gem>
     <gem id="id6">
-        <name>topaz</name>
+        <name>Topaz</name>
         <preciousness>semiprecious</preciousness>
-        <origin>france</origin>
+        <origin>France</origin>
         <visual_parameters>
-            <colour>blue</colour>
+            <colour>Blue</colour>
             <transparency>80</transparency>
             <faceting>10</faceting>
         </visual_parameters>
@@ -73,11 +73,11 @@
         <value>115</value>
     </gem>
     <gem id="id7">
-        <name>diamond</name>
+        <name>Diamond</name>
         <preciousness>precious</preciousness>
-        <origin>italy</origin>
+        <origin>Italy</origin>
         <visual_parameters>
-            <colour>blue</colour>
+            <colour>Blue</colour>
             <transparency>100</transparency>
             <faceting>14</faceting>
         </visual_parameters>
@@ -85,11 +85,11 @@
         <value>30</value>
     </gem>
     <gem id="id8">
-        <name>diamond</name>
+        <name>Diamond</name>
         <preciousness>precious</preciousness>
-        <origin>italy</origin>
+        <origin>Italy</origin>
         <visual_parameters>
-            <colour>blue</colour>
+            <colour>Blue</colour>
             <transparency>100</transparency>
             <faceting>15</faceting>
         </visual_parameters>

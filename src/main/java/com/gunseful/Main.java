@@ -8,8 +8,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -18,11 +17,9 @@ public class Main {
 
         Factory factory = Factory.getInstance();
         Parser parser = factory.chooseParser("sax");
-        List<Gem> list = parser.parse("src/main/resources/gem.xml");
-        list.sort(Comporators.comparatorByColour);
-//        list.forEach(System.out::println);
-        StaxParser parser1 = new StaxParser();
-        parser1.parse("src/main/resources/gem.xml").forEach(System.out::println);
+        List<Gem> list = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
+        list.sort(Comparator.comparing(Gem::getName));
+        list.forEach(System.out::println);
 
     }
 }

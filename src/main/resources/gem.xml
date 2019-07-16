@@ -9,7 +9,7 @@
         <transparency>100</transparency>
         <faceting>10</faceting>
     </visual_parameters>
-    <price>1.4</price>
+    <price>1200.8</price>
     <value>15</value>
     </gem>
     <gem id="id2">
@@ -21,7 +21,7 @@
             <transparency>80</transparency>
             <faceting>5</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>850.4</price>
         <value>200</value>
     </gem>
     <gem id="id3">
@@ -33,7 +33,7 @@
             <transparency>65</transparency>
             <faceting>8</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>920.4</price>
         <value>100</value>
     </gem>
     <gem id="id4">
@@ -45,7 +45,7 @@
             <transparency>64</transparency>
             <faceting>7</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>81.1</price>
         <value>500</value>
     </gem>
     <gem id="id5">
@@ -57,7 +57,7 @@
             <transparency>75</transparency>
             <faceting>9</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>42.42</price>
         <value>300</value>
     </gem>
     <gem id="id6">
@@ -69,7 +69,7 @@
             <transparency>80</transparency>
             <faceting>10</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>6.77</price>
         <value>115</value>
     </gem>
     <gem id="id7">
@@ -81,7 +81,7 @@
             <transparency>100</transparency>
             <faceting>14</faceting>
         </visual_parameters>
-        <price>1.4</price>
+        <price>1600.47</price>
         <value>30</value>
     </gem>
     <gem id="id8">
@@ -93,8 +93,8 @@
             <transparency>100</transparency>
             <faceting>15</faceting>
         </visual_parameters>
-        <price>1.4</price>
-        <value>30</value>
+        <price>1000.2</price>
+        <value>70</value>
     </gem>
 </gem>
 

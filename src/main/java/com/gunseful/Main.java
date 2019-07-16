@@ -1,8 +1,9 @@
 package com.gunseful;
 
-import com.gunseful.comporators.Comporators;
+import com.gunseful.factory.Factory;
 import com.gunseful.item.Gem;
 import com.gunseful.parser.*;
+import com.gunseful.reader.Reader;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -19,6 +20,9 @@ public class Main {
         Parser parser = factory.chooseParser("sax");
         List<Gem> list = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
         list.sort(Comparator.comparing(Gem::getName));
+        list.forEach(System.out::println);
+        System.out.println("\n");
+        list.sort((Gem o1, Gem o2)->o1.getGemsVisualParameters().getColour().compareTo(o2.getGemsVisualParameters().getColour()));
         list.forEach(System.out::println);
 
     }

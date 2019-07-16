@@ -11,7 +11,7 @@ public class Gem {
 
     @Override
     public String toString() {
-        return "Gem{" +
+        return "Gem - " +
                 id+
                 ", Name = " + name +
                 ", Precious = " + precious +

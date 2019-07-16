@@ -1,4 +1,9 @@
-package com.gunseful.parser;
+package com.gunseful.factory;
+
+import com.gunseful.parser.DomParser;
+import com.gunseful.parser.Parser;
+import com.gunseful.parser.SaxParser;
+import com.gunseful.parser.StaxParser;
 
 public class Factory {
     private static Factory instance = null;

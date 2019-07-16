@@ -1,4 +1,4 @@
-package com.gunseful.parser;
+package com.gunseful.reader;
 
 import java.io.File;
 

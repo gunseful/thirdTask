@@ -1,17 +1,16 @@
 package com.gunseful.item;
 
 public class GemsVisualParameters {
+
     private String colour;
-
-    @Override
-    public String toString() {
-        return  "Colour = "+ colour +
-                ", Transparency=" + transparency +
-                ", Faceting=" + faceting                ;
-    }
-
     private int transparency;
     private int faceting;
+
+    public GemsVisualParameters(String colour, int transparency, int faceting) {
+        this.colour = colour;
+        this.transparency = transparency;
+        this.faceting = faceting;
+    }
 
     public String getColour() {
         return colour;
@@ -25,10 +24,11 @@ public class GemsVisualParameters {
         return faceting;
     }
 
-    public GemsVisualParameters(String colour, int transparency, int faceting) {
-        this.colour = colour;
-        this.transparency = transparency;
-        this.faceting = faceting;
+    @Override
+    public String toString() {
+        return "Colour = " + colour +
+                ", Transparency=" + transparency +
+                ", Faceting=" + faceting;
     }
 
 

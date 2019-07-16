@@ -28,7 +28,7 @@ public class GemsVisualParameters {
     public String toString() {
         return "Colour = " + colour +
                 ", Transparency=" + transparency +
-                ", Faceting=" + faceting;
+                "%, Faceting=" + faceting;
     }
 
 

@@ -1,5 +1,7 @@
 package com.gunseful.item;
 
+import java.util.Objects;
+
 public class Gem {
     private String id;
     private String name;
@@ -7,7 +9,7 @@ public class Gem {
     private String origin;
     private double price;
     private int value;
-    GemsVisualParameters gemsVisualParameters;
+    private GemsVisualParameters gemsVisualParameters;
 
     @Override
     public String toString() {
@@ -71,5 +73,23 @@ public class Gem {
         this.value = value;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Gem gem = (Gem) o;
+        return precious == gem.precious &&
+                Double.compare(gem.price, price) == 0 &&
+                value == gem.value &&
+                Objects.equals(id, gem.id) &&
+                Objects.equals(name, gem.name) &&
+                Objects.equals(origin, gem.origin) &&
+                Objects.equals(gemsVisualParameters, gem.gemsVisualParameters);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, precious, origin, price, value, gemsVisualParameters);
+    }
 }
+

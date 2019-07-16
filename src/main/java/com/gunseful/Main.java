@@ -22,8 +22,8 @@ public class Main {
         list.sort(Comparator.comparing(Gem::getName));
         list.forEach(System.out::println);
         System.out.println("\n");
-//        list.sort((Gem o1, Gem o2)->o1.getGemsVisualParameters().getColour().compareTo(o2.getGemsVisualParameters().getColour()));
-//        list.forEach(System.out::println);
+        list.sort((Gem o1, Gem o2)->o1.getGemsVisualParameters().getColour().compareTo(o2.getGemsVisualParameters().getColour()));
+        list.forEach(System.out::println);
 
     }
 }

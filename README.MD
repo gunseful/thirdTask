@@ -5,7 +5,7 @@ whats new :
 
 1. Added Test
 2. Added Factory
-3. Added Separate class for Gem's Parameters
+3. Added separate class for Gem's Parameters
 4. Added DOM parser
 5. Added Stax Parser
 6. Added Interface Parser

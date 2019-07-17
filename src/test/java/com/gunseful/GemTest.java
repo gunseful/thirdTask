@@ -16,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GemTest {
-    @Test
-    public void test() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
+    public static List<Gem> getListExpected(){
         List<Gem> gemListExpected = new ArrayList<>();
         gemListExpected.add(new Gem("id1", "Almaz", true,
                 "Africa", 1200.8, 15, new GemsVisualParameters("White", 100, 10)));
@@ -35,11 +34,38 @@ public class GemTest {
                 "Italy", 1600.47, 30, new GemsVisualParameters("Blue", 100, 14)));
         gemListExpected.add(new Gem("id8", "Diamond", true,
                 "Italy", 1000.2, 70, new GemsVisualParameters("Blue", 100, 15)));
+        return gemListExpected;
+    }
+
+    @Test
+    public void SaxParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
 
         Factory factory = Factory.getInstance();
         Parser parser = factory.chooseParser("sax");
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
-        Assert.assertEquals(gemListExpected, gemListActual);
+        Assert.assertEquals(getListExpected(), gemListActual);
+        gemListActual = null;
+    }
+
+    @Test
+    public void DomParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
+
+        Factory factory = Factory.getInstance();
+        Parser parser = factory.chooseParser("dom");
+        List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
+
+        Assert.assertEquals(getListExpected(), gemListActual);
+        gemListActual = null;
+    }
+
+    @Test
+    public void StaxParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
+
+        Factory factory = Factory.getInstance();
+        Parser parser = factory.chooseParser("stax");
+        List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
+
+        Assert.assertEquals(getListExpected(), gemListActual);
     }
 }

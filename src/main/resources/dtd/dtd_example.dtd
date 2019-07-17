@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note
+[
+        <!ELEMENT gem (gem+)>
+        <!ELEMENT gem (name,preciousness,origin,visual_parameters, price, value)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT preciousness (#PCDATA)>
+        <!ELEMENT origin (#PCDATA)>
+        <!ELEMENT visual_parameters (colour,transparency,faceting)>
+        <!ELEMENT colour (#PCDATA)>
+        <!ELEMENT transparency (#PCDATA)>
+        <!ELEMENT faceting (#PCDATA)>
+
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT value (#PCDATA)>
+
+
+        <!ATTLIST gem
+                id CDATA #REQUIRED
+                >
+
+]>

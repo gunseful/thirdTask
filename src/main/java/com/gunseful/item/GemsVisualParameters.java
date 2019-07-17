@@ -47,6 +47,4 @@ public class GemsVisualParameters {
                 ", Transparency=" + transparency +
                 "%, Faceting=" + faceting;
     }
-
-
 }

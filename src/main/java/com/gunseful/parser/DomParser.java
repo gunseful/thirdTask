@@ -46,11 +46,6 @@ public class DomParser implements Parser {
 
             gems.add(new Gem(id, name, percious, origin, price, value, gemsVisualParameters));
 
-
-
-
-
-
         }
         return gems;
     }

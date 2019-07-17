@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gem SYSTEM "dtd_example.dtd">
+<gem>
+<gem id="id1" >
+    <name>Almaz</name>
+    <preciousness>precious</preciousness>
+    <origin>Africa</origin>
+    <visual_parameters>
+        <colour>White</colour>
+        <transparency>100</transparency>
+        <faceting>10</faceting>
+    </visual_parameters>
+    <price>1200.8</price>
+    <value>15</value>
+</gem>
+<gem id="id2">
+<name>Rube</name>
+<preciousness>precious</preciousness>
+<origin>USA</origin>
+<visual_parameters>
+    <colour>Red</colour>
+    <transparency>80</transparency>
+    <faceting>5</faceting>
+</visual_parameters>
+<price>850.4</price>
+<value>200</value>
+</gem>
+<gem id="id3">
+<name>Sapphire</name>
+<preciousness>precious</preciousness>
+<origin>Kazakhstan</origin>
+<visual_parameters>
+    <colour>Green</colour>
+    <transparency>65</transparency>
+    <faceting>8</faceting>
+</visual_parameters>
+<price>920.4</price>
+<value>100</value>
+</gem>
+<gem id="id4">
+<name>Ametrine</name>
+<preciousness>semiprecious</preciousness>
+<origin>Kazakhstan</origin>
+<visual_parameters>
+    <colour>Violet</colour>
+    <transparency>64</transparency>
+    <faceting>7</faceting>
+</visual_parameters>
+<price>81.1</price>
+<value>500</value>
+</gem>
+<gem id="id5">
+<name>Amethyst</name>
+<preciousness>semiprecious</preciousness>
+<origin>Russia</origin>
+<visual_parameters>
+    <colour>Violet</colour>
+    <transparency>75</transparency>
+    <faceting>9</faceting>
+</visual_parameters>
+<price>42.42</price>
+<value>300</value>
+</gem>
+<gem id="id6">
+<name>Topaz</name>
+<preciousness>semiprecious</preciousness>
+<origin>France</origin>
+<visual_parameters>
+    <colour>Blue</colour>
+    <transparency>80</transparency>
+    <faceting>10</faceting>
+</visual_parameters>
+<price>6.77</price>
+<value>115</value>
+</gem>
+<gem id="id7">
+<name>Diamond</name>
+<preciousness>precious</preciousness>
+<origin>Italy</origin>
+<visual_parameters>
+    <colour>Blue</colour>
+    <transparency>100</transparency>
+    <faceting>14</faceting>
+</visual_parameters>
+<price>1600.47</price>
+<value>30</value>
+</gem>
+<gem id="id8">
+<name>Diamond</name>
+<preciousness>precious</preciousness>
+<origin>Italy</origin>
+<visual_parameters>
+    <colour>Blue</colour>
+    <transparency>100</transparency>
+    <faceting>15</faceting>
+</visual_parameters>
+<price>1000.2</price>
+<value>70</value>
+</gem>
+</gem>

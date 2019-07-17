@@ -2,8 +2,18 @@ gunseful
 third task
 
 whats new :
-1. Не совсем понял что ты имел ввиду заменить компораторы на лямбды, ну я в мейне реализовал с помощью лямбд компоратор,
-то есть надо выпить нахуй класс компоратор ваще?
+
+1. Added Test
+2. Added Factory
+3. Added Separate class for Gem's Parameters
+4. Added DOM parser
+5. Added Stax Parser
+6. Added Interface Parser
+7. Added Reader
+8. Use lambdas for sorting(instead Comparators).
+9. Use patterns in XSD file
+10. Use decimal type in XSD file
+
 
 
 task:

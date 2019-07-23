@@ -14,12 +14,14 @@ public class Factory {
     private static class LazySomethingHolder {
         public static Factory singletonInstance = new Factory();
     }
-        public Parser chooseParser(String type) {
+        public Parser chooseParser(Class<? extends Parser> type) {
             Parser parser = null;
-            switch (type){
-                case "dom": return parser = new DomParser();
-                case "sax": return parser = new SaxParser();
-                case "stax": return parser = new StaxParser();
+            if (DomParser.class.equals(type)) {
+                return parser = new DomParser();
+            } else if (SaxParser.class.equals(type)) {
+                return parser = new SaxParser();
+            } else if (StaxParser.class.equals(type)) {
+                return parser = new StaxParser();
             }
             return null;
     }

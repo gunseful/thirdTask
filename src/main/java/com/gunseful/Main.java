@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XMLStreamException {
 
         Factory factory = Factory.getInstance();
-        Parser parser = factory.chooseParser("stax");
+        Parser parser = factory.chooseParser(StaxParser.class);
         List<Gem> list = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
         list.sort(Comparator.comparing(Gem::getId));
         list.forEach(System.out::println);

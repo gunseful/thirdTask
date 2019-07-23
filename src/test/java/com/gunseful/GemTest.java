@@ -3,7 +3,10 @@ package com.gunseful;
 import com.gunseful.factory.Factory;
 import com.gunseful.item.Gem;
 import com.gunseful.item.GemsVisualParameters;
+import com.gunseful.parser.DomParser;
 import com.gunseful.parser.Parser;
+import com.gunseful.parser.SaxParser;
+import com.gunseful.parser.StaxParser;
 import com.gunseful.reader.Reader;
 import org.junit.Assert;
 import org.junit.Test;
@@ -41,29 +44,29 @@ public class GemTest {
     public void SaxParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
 
         Factory factory = Factory.getInstance();
-        Parser parser = factory.chooseParser("sax");
+        Parser parser = factory.chooseParser(SaxParser.class);
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
         Assert.assertEquals(getListExpected(), gemListActual);
-        gemListActual = null;
+//        gemListActual = null;
     }
 
     @Test
     public void DomParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
 
         Factory factory = Factory.getInstance();
-        Parser parser = factory.chooseParser("dom");
+        Parser parser = factory.chooseParser(DomParser.class);
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
         Assert.assertEquals(getListExpected(), gemListActual);
-        gemListActual = null;
+//        gemListActual = null;
     }
 
     @Test
     public void StaxParserTest() throws ParserConfigurationException, XMLStreamException, SAXException, IOException {
 
         Factory factory = Factory.getInstance();
-        Parser parser = factory.chooseParser("stax");
+        Parser parser = factory.chooseParser(StaxParser.class);
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
         Assert.assertEquals(getListExpected(), gemListActual);

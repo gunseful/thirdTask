@@ -63,6 +63,8 @@ public class StaxParser implements Parser {
                         Characters preciousnessDataEvent = (Characters) eventReader.nextEvent();
                         if (preciousnessDataEvent.getData().equals("precious")) {
                             precious = true;
+                        }else{
+                            precious = false;
                         }
                         break;
 
@@ -102,7 +104,9 @@ public class StaxParser implements Parser {
                 EndElement endElement = xmlEvent.asEndElement();
                 if ("gem".equalsIgnoreCase(endElement.getName().getLocalPart())) {
                     GemsVisualParameters gemsVisualParameters = new GemsVisualParameters(colour, transparency, faceting);
-                    gems.add(new Gem(id, name, precious, origin, price, value, gemsVisualParameters));
+                    if(!id.equals("")){
+                    gems.add(new Gem(id, name, precious, origin, price, value, gemsVisualParameters));}
+                    id = "";
                 }
             }
         }

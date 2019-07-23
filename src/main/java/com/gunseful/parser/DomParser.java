@@ -20,6 +20,7 @@ import org.w3c.dom.Node;
 public class DomParser implements Parser {
     @Override
     public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException {
+        List<Gem> gems = new ArrayList<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
 

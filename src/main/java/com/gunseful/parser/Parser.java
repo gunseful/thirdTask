@@ -11,6 +11,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Parser {
-    ArrayList<Gem> gems = new ArrayList<>();
     List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException, XMLStreamException;
 }

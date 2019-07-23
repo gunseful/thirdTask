@@ -13,11 +13,13 @@ import javax.xml.stream.events.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class StaxParser implements Parser {
     public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException, XMLStreamException { ;
+        List<Gem> gems = new ArrayList<>();
 
         XMLInputFactory factory = XMLInputFactory.newInstance();
 
@@ -41,7 +43,6 @@ public class StaxParser implements Parser {
                 if ("gem".equalsIgnoreCase(startElement.getName().getLocalPart())) {
                 }
 
-                @SuppressWarnings("unchecked")
                 Iterator<Attribute> iterator = startElement.getAttributes();
 
                 while (iterator.hasNext()) {

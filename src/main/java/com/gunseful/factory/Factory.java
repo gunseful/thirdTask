@@ -6,23 +6,21 @@ import com.gunseful.parser.SaxParser;
 import com.gunseful.parser.StaxParser;
 
 public class Factory {
-    private static Factory instance = null;
+
     private Factory(){}
     public static Factory getInstance(){
-        if(instance == null){
-            instance = new Factory();
-        }
-        return instance;
+        return LazySomethingHolder.singletonInstance ;
     }
-        public Parser chooseParser(String inputos) {
+    private static class LazySomethingHolder {
+        public static Factory singletonInstance = new Factory();
+    }
+        public Parser chooseParser(String type) {
             Parser parser = null;
-            if (inputos.equals("dom")) {
-                parser = new DomParser();
-            } else if (inputos.equals("sax")) {
-                parser = new SaxParser();
-            } else if (inputos.equals("stax")) {
-                parser = new StaxParser();
-        }
-            return parser;
+            switch (type){
+                case "dom": return parser = new DomParser();
+                case "sax": return parser = new SaxParser();
+                case "stax": return parser = new StaxParser();
+            }
+            return null;
     }
 }

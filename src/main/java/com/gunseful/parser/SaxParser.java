@@ -14,7 +14,9 @@ import java.util.List;
 
 public class SaxParser implements Parser{
 
+
     public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException {
+
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser builder = factory.newSAXParser();
 
@@ -25,8 +27,9 @@ public class SaxParser implements Parser{
     }
 
     static class Handler extends DefaultHandler {
+        static List<Gem> gems = new ArrayList<>();
 
-        static ArrayList<Gem> getGems() {
+        static List<Gem> getGems() {
             return gems;
         }
         private String id;
@@ -90,6 +93,7 @@ public class SaxParser implements Parser{
                     preciousBoolean = true;
                 }
                 gemsVisualParameters = new GemsVisualParameters(colour, transparencyInt, facetingInt);
+
                 gems.add(new Gem(id, name, preciousBoolean, origin, priceDouble, valueInt, gemsVisualParameters));
                 name = null;
                 precious = null;

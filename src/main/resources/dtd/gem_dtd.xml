@@ -3,7 +3,7 @@
 <gem>
 <gem id="id1" >
     <name>Almaz</name>
-    <preciousness>precious</preciousness>
+    <preciousness>preciousness</preciousness>
     <origin>Africa</origin>
     <visual_parameters>
         <colour>White</colour>
@@ -15,7 +15,7 @@
 </gem>
 <gem id="id2">
 <name>Rube</name>
-<preciousness>precious</preciousness>
+<preciousness>preciousness</preciousness>
 <origin>USA</origin>
 <visual_parameters>
     <colour>Red</colour>
@@ -27,7 +27,7 @@
 </gem>
 <gem id="id3">
 <name>Sapphire</name>
-<preciousness>precious</preciousness>
+<preciousness>preciousness</preciousness>
 <origin>Kazakhstan</origin>
 <visual_parameters>
     <colour>Green</colour>
@@ -75,7 +75,7 @@
 </gem>
 <gem id="id7">
 <name>Diamond</name>
-<preciousness>precious</preciousness>
+<preciousness>preciousness</preciousness>
 <origin>Italy</origin>
 <visual_parameters>
     <colour>Blue</colour>
@@ -87,7 +87,7 @@
 </gem>
 <gem id="id8">
 <name>Diamond</name>
-<preciousness>precious</preciousness>
+<preciousness>preciousness</preciousness>
 <origin>Italy</origin>
 <visual_parameters>
     <colour>Blue</colour>

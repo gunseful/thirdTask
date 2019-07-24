@@ -34,14 +34,14 @@ public class DomParser implements Parser {
 
             String name = document.getElementsByTagName("name").item(i).getTextContent();
             boolean percious = false;
-            if(document.getElementsByTagName("preciousness").item(i).getTextContent().equals("precious")){
+            if(document.getElementsByTagName("preciousness").item(i).getTextContent().equals("preciousness")){
                 percious = true;
             }
             String origin = document.getElementsByTagName("origin").item(i).getTextContent();
             String colour = document.getElementsByTagName("colour").item(i).getTextContent();
             int transparency = Integer.parseInt(document.getElementsByTagName("transparency").item(i).getTextContent());
             int faceting = Integer.parseInt(document.getElementsByTagName("faceting").item(i).getTextContent());
-            Double price = Double.parseDouble(document.getElementsByTagName("price").item(i).getTextContent());
+            double price = Double.parseDouble(document.getElementsByTagName("price").item(i).getTextContent());
             int value = Integer.parseInt(document.getElementsByTagName("value").item(i).getTextContent());
             String id = attributes.getNamedItem("id").getNodeValue();
             GemsVisualParameters gemsVisualParameters = new GemsVisualParameters(colour, transparency, faceting);

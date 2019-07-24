@@ -40,8 +40,7 @@ public class StaxParser implements Parser {
             if (xmlEvent.isStartElement()) {
                 StartElement startElement = xmlEvent.asStartElement();
 
-                if ("gem".equalsIgnoreCase(startElement.getName().getLocalPart())) {
-                }
+                startElement.getName().getLocalPart();
 
                 Iterator<Attribute> iterator = startElement.getAttributes();
 
@@ -61,7 +60,7 @@ public class StaxParser implements Parser {
 
                     case "preciousness":
                         Characters preciousnessDataEvent = (Characters) eventReader.nextEvent();
-                        if (preciousnessDataEvent.getData().equals("precious")) {
+                        if (preciousnessDataEvent.getData().equals("preciousness")) {
                             precious = true;
                         }else{
                             precious = false;

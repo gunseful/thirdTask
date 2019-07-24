@@ -3,9 +3,9 @@ package com.gunseful.item;
 import java.util.Objects;
 
 public class Gem {
-    private String id;
+    public String id;
     private String name;
-    private boolean precious;
+    private boolean preciousness;
     private String origin;
     private double price;
     private int value;
@@ -16,7 +16,7 @@ public class Gem {
         return "Gem - " +
                 id+
                 ", Name = " + name +
-                ", Precious = " + precious +
+                ", Precious = " + preciousness +
                 ", Origin = " + origin +
                 ", Price = "  + price +
                 "$, Value = " + value +
@@ -30,7 +30,7 @@ public class Gem {
     public Gem(String id, String name, boolean precious, String origin, double price, int value, GemsVisualParameters gemsVisualParameters) {
         this.id = id;
         this.name = name;
-        this.precious = precious;
+        this.preciousness = precious;
         this.origin = origin;
         this.price = price;
         this.value = value;
@@ -45,16 +45,24 @@ public class Gem {
         return name;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public boolean isPrecious() {
-        return precious;
+    public boolean isPreciousness() {
+        return preciousness;
     }
 
-    public void setPrecious(boolean precious) {
-        this.precious = precious;
+    public void setPreciousness(boolean preciousness) {
+        this.preciousness = preciousness;
+    }
+
+    public boolean getPrecious() {
+        return preciousness;
     }
 
     public String getOrigin() {
@@ -78,7 +86,7 @@ public class Gem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Gem gem = (Gem) o;
-        return precious == gem.precious &&
+        return preciousness == gem.preciousness &&
                 Double.compare(gem.price, price) == 0 &&
                 value == gem.value &&
                 Objects.equals(id, gem.id) &&
@@ -89,7 +97,7 @@ public class Gem {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, precious, origin, price, value, gemsVisualParameters);
+        return Objects.hash(id, name, preciousness, origin, price, value, gemsVisualParameters);
     }
 }
 

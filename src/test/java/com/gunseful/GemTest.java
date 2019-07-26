@@ -48,7 +48,6 @@ public class GemTest {
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
         Assert.assertEquals(getListExpected(), gemListActual);
-//        gemListActual = null;
     }
 
     @Test
@@ -59,7 +58,6 @@ public class GemTest {
         List<Gem> gemListActual = parser.parse(new Reader().readFile("src/main/resources/gem.xml"));
 
         Assert.assertEquals(getListExpected(), gemListActual);
-//        gemListActual = null;
     }
 
     @Test

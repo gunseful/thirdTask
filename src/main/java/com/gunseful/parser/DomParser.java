@@ -2,7 +2,9 @@ package com.gunseful.parser;
 
 import com.gunseful.item.Gem;
 import com.gunseful.item.GemsVisualParameters;
+import com.gunseful.reflection.ReflectionMethod;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -13,42 +15,46 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-
 
 public class DomParser implements Parser {
     @Override
     public List<Gem> parse(File file) throws ParserConfigurationException, SAXException, IOException {
+        //создаем список всех камней
         List<Gem> gems = new ArrayList<>();
+        //создаем фабрику, билдер и парсим XML файл, получая document, с которым дальше будем работать
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-
         Document document = builder.parse(file);
-
+        //получаем список нодов(подтэгов) внутри тэгов gem и visual_parameters
         NodeList gemElements = document.getDocumentElement().getElementsByTagName("gem");
-
+        NodeList gemVisualParametersElements = document.getDocumentElement().getElementsByTagName("visual_parameters");
+        //создаем объекты камень и визуальные параметры камня, так же создаем спец класс чтобы юзать рефлекшн
+        ReflectionMethod reflectionMethods = new ReflectionMethod();
+        GemsVisualParameters gemsVisualParameters = new GemsVisualParameters();
+        Gem gemSource = new Gem(gemsVisualParameters);
+        //заходим в цикл, первое - берем гем, второе - берем первое дочернее его значение. Итак проходим все
         for (int i = 0; i < gemElements.getLength(); i++) {
-            Node gem = gemElements.item(i);
-            NamedNodeMap attributes = gem.getAttributes();
-
-            String name = document.getElementsByTagName("name").item(i).getTextContent();
-            boolean percious = false;
-            if(document.getElementsByTagName("preciousness").item(i).getTextContent().equals("preciousness")){
-                percious = true;
+            for (int k = 0; k < gemElements.item(i).getChildNodes().getLength(); k++) {
+                //Берем тэг gem и среди дочерних ищем все совпадения тегов и полей класса Gem, при совпадении добавляем значение из XML в gem
+                Node nodeGem = gemElements.item(i).getChildNodes().item(k);
+                reflectionMethods.pars(nodeGem.getNodeName(), gemSource, nodeGem.getTextContent());
+                //Ищем совпадение полей и аттрибутов -> находим id и добавляем значение из XML в gem.id;
+                try {
+                    reflectionMethods.pars(gemElements.item(i).getAttributes().item(k).getNodeName(), gemSource, gemElements.item(i).getAttributes().item(k).getTextContent());
+                } catch (Exception ignored) {}
+                //Берем visual_parameters, ищем сравнение тега и поля класса GemsVisualParameters, при совпадении добавляем значение из XML в gemsVisualParameters
+                if (k < gemVisualParametersElements.item(i).getChildNodes().getLength()) {
+                    Node nodeVisualParameters = gemVisualParametersElements.item(i).getChildNodes().item(k);
+                    reflectionMethods.pars(nodeVisualParameters.getNodeName(), gemsVisualParameters, nodeVisualParameters.getTextContent());
+                }
             }
-            String origin = document.getElementsByTagName("origin").item(i).getTextContent();
-            String colour = document.getElementsByTagName("colour").item(i).getTextContent();
-            int transparency = Integer.parseInt(document.getElementsByTagName("transparency").item(i).getTextContent());
-            int faceting = Integer.parseInt(document.getElementsByTagName("faceting").item(i).getTextContent());
-            double price = Double.parseDouble(document.getElementsByTagName("price").item(i).getTextContent());
-            int value = Integer.parseInt(document.getElementsByTagName("value").item(i).getTextContent());
-            String id = attributes.getNamedItem("id").getNodeValue();
-            GemsVisualParameters gemsVisualParameters = new GemsVisualParameters(colour, transparency, faceting);
-
-            gems.add(new Gem(id, name, percious, origin, price, value, gemsVisualParameters));
-
+                //добавляем собранный гем в список всех гемов
+                gems.add(gemSource);
+                //создаем новые объекты
+                gemsVisualParameters = new GemsVisualParameters();
+                gemSource = new Gem(gemsVisualParameters);
         }
+        //когда пройдем все тэги, возвращаем список камней
         return gems;
     }
 }

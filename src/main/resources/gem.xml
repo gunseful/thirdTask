@@ -2,7 +2,7 @@
 <gem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gem_schema.xsd">
     <gem id="id1" >
     <name>Almaz</name>
-    <preciousness>preciousness</preciousness>
+    <preciousness>precious</preciousness>
     <origin>Africa</origin>
     <visual_parameters>
         <colour>White</colour>
@@ -14,7 +14,7 @@
     </gem>
     <gem id="id2">
         <name>Rube</name>
-        <preciousness>preciousness</preciousness>
+        <preciousness>precious</preciousness>
         <origin>USA</origin>
         <visual_parameters>
             <colour>Red</colour>
@@ -26,7 +26,7 @@
     </gem>
     <gem id="id3">
         <name>Sapphire</name>
-        <preciousness>preciousness</preciousness>
+        <preciousness>precious</preciousness>
         <origin>Kazakhstan</origin>
         <visual_parameters>
             <colour>Green</colour>
@@ -74,7 +74,7 @@
     </gem>
     <gem id="id7">
         <name>Diamond</name>
-        <preciousness>preciousness</preciousness>
+        <preciousness>precious</preciousness>
         <origin>Italy</origin>
         <visual_parameters>
             <colour>Blue</colour>
@@ -86,7 +86,7 @@
     </gem>
     <gem id="id8">
         <name>Diamond</name>
-        <preciousness>preciousness</preciousness>
+        <preciousness>precious</preciousness>
         <origin>Italy</origin>
         <visual_parameters>
             <colour>Blue</colour>

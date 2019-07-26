@@ -8,19 +8,7 @@ public class GemsVisualParameters {
     private int transparency;
     private int faceting;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        GemsVisualParameters that = (GemsVisualParameters) o;
-        return transparency == that.transparency &&
-                faceting == that.faceting &&
-                Objects.equals(colour, that.colour);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(colour, transparency, faceting);
+    public GemsVisualParameters() {
     }
 
     public GemsVisualParameters(String colour, int transparency, int faceting) {
@@ -28,6 +16,8 @@ public class GemsVisualParameters {
         this.transparency = transparency;
         this.faceting = faceting;
     }
+
+
 
     public String getColour() {
         return colour;
@@ -46,5 +36,20 @@ public class GemsVisualParameters {
         return "Colour = " + colour +
                 ", Transparency=" + transparency +
                 "%, Faceting=" + faceting;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GemsVisualParameters that = (GemsVisualParameters) o;
+        return transparency == that.transparency &&
+                faceting == that.faceting &&
+                Objects.equals(colour, that.colour);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(colour, transparency, faceting);
     }
 }

@@ -11,20 +11,12 @@ public class Gem {
     private int value;
     private GemsVisualParameters gemsVisualParameters;
 
-    @Override
-    public String toString() {
-        return "Gem - " +
-                id+
-                ", Name = " + name +
-                ", Precious = " + preciousness +
-                ", Origin = " + origin +
-                ", Price = "  + price +
-                "$, Value = " + value +
-                ", Visual Parameters: " + gemsVisualParameters;
+    public Gem(GemsVisualParameters gemsVisualParameters) {
+        this.gemsVisualParameters = gemsVisualParameters;
     }
 
-    public GemsVisualParameters getGemsVisualParameters() {
-        return gemsVisualParameters;
+    public void setGemsVisualParameters(GemsVisualParameters gemsVisualParameters) {
+        this.gemsVisualParameters = gemsVisualParameters;
     }
 
     public Gem(String id, String name, boolean precious, String origin, double price, int value, GemsVisualParameters gemsVisualParameters) {
@@ -35,6 +27,10 @@ public class Gem {
         this.price = price;
         this.value = value;
         this.gemsVisualParameters = gemsVisualParameters;
+    }
+
+    public GemsVisualParameters getGemsVisualParameters() {
+        return gemsVisualParameters;
     }
 
     public String getId() {
@@ -79,6 +75,18 @@ public class Gem {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Gem - " +
+                id+
+                ", Name = " + name +
+                ", Precious = " + preciousness +
+                ", Origin = " + origin +
+                ", Price = "  + price +
+                "$, Value = " + value +
+                ", Visual Parameters: " + gemsVisualParameters;
     }
 
     @Override

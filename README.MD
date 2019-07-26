@@ -1,18 +1,14 @@
 gunseful
 third task
 
-whats new :
+whats new in version 2:
 
-1. Added Test
-2. Added Factory
-3. Added separate class for Gem's Parameters
-4. Added DOM parser
-5. Added Stax Parser
-6. Added Interface Parser
-7. Added Reader
-8. Use lambdas for sorting(instead Comparators).
-9. Use patterns in XSD file
-10. Use decimal type in XSD file
+1. Добавлен новый класс, который парсит и с помощью рефлекшена устанавливает значения полей согласно тэга
+2. Этот класс применен ко всем трем парсерам
+3. Провелась работа над тем чтобы не было повторений кода (они вроде есть, но супер минимальные, создавать класс для такой хуйни решил не стоит
+4. Убрал двойной трай кетч, но в ДОМе пришлось для аттрибутов заюзать его еще раз, возможно ошибка, но по другому не придумал
+5. ^Получается в аттрибутах тоже заюзал рефлекшн
+6. Убрал пустые конструкторы
 
 
 
